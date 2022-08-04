@@ -9,8 +9,8 @@ class BotaoReservas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 260,
+      height: MediaQuery.of(context).size.height * 0.06,
+      width: MediaQuery.of(context).size.width * 0.5,
       alignment: Alignment.center,
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 28, 68, 129),
