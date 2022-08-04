@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
 import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 
-class mother_screen extends StatefulWidget {
-  const mother_screen({Key? key}) : super(key: key);
+class MotherScreen extends StatefulWidget {
+  const MotherScreen({Key? key}) : super(key: key);
 
   @override
-  State<mother_screen> createState() => _mother_screenState();
+  State<MotherScreen> createState() => _MotherScreenState();
 }
 
-class _mother_screenState extends State<mother_screen> {
+class _MotherScreenState extends State<MotherScreen> {
   int currentPageIndex = 0;
 
   final screensList = [
     //aqui a gente coloca cada página referente à um item na navigation bar
-    choose_room_or_court(),
+    // ChooseRoomOrCourt(),
+    BackgroundCardRoomChoose(),
     Text("Goodbye"),
     Text("Fare well"),
     Text("So long"),

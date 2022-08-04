@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class choose_room_or_court extends StatelessWidget {
-  choose_room_or_court({Key? key}) : super(key: key);
+class ChooseRoomOrCourt extends StatelessWidget {
+  ChooseRoomOrCourt({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
