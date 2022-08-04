@@ -16,7 +16,7 @@ class _MotherScreenState extends State<MotherScreen> {
     //aqui a gente coloca cada página referente à um item na navigation bar
     // ChooseRoomOrCourt(),
     BackgroundCardRoomChoose(),
-    Text("Goodbye"),
+    ChooseRoomOrCourt(),
     Text("Fare well"),
     Text("So long"),
   ];

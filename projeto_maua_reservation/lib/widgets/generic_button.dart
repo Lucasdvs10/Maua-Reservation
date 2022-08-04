@@ -57,6 +57,7 @@ class GenericButton extends StatefulWidget {
       },
     );
   }
+  
 
   factory GenericButton.Voltar() {
     return GenericButton(
