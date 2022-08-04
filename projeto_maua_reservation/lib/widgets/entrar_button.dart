@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:projeto_maua_reservation/pages/tela_mae.dart';
+import 'package:projeto_maua_reservation/pages/mother_screen.dart';
 
 class EntrarButton extends StatelessWidget {
   const EntrarButton({Key? key}) : super(key: key);

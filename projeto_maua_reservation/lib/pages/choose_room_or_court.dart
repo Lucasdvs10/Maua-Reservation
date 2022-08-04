@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
+import 'package:projeto_maua_reservation/widgets/calendar.dart';
 
 class ChooseRoomOrCourt extends StatelessWidget {
   ChooseRoomOrCourt({Key? key}) : super(key: key);
@@ -18,6 +19,11 @@ class ChooseRoomOrCourt extends StatelessWidget {
                   fontSize: 30, color: Color.fromARGB(255, 12, 74, 126))),
           SizedBox(height: 40),
           BotaoGrandeComIcone("Salas", () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const BackgroundCardRoomChoose()),
+            );
             print("Indo para a página de salas");
           }, 'assets/images/Circulos.png'),
           SizedBox(height: 100),
