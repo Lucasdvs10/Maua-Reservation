@@ -29,8 +29,8 @@ class BackgroundCardRoomChoose extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 100,
-              left: 160,
+              top: 120,
+              left: 150,
               child: Container(
                   alignment: Alignment.center,
                   width: 200,
@@ -46,7 +46,7 @@ class BackgroundCardRoomChoose extends StatelessWidget {
                   )),
             ),
             Positioned(
-              bottom: 90,
+              bottom: 110,
               left: 200,
               child: Container(
                   width: 100,
