@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_maua_reservation/pages/tela_quadra_ou_sala.dart';
+import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 
-
-
-class TelaMae extends StatefulWidget {
-  const TelaMae({Key? key}) : super(key: key);
+class mother_screen extends StatefulWidget {
+  const mother_screen({Key? key}) : super(key: key);
 
   @override
-  State<TelaMae> createState() => _TelaMaeState();
+  State<mother_screen> createState() => _mother_screenState();
 }
 
-class _TelaMaeState extends State<TelaMae> {
+class _mother_screenState extends State<mother_screen> {
   int currentPageIndex = 0;
 
   final screensList = [
     //aqui a gente coloca cada página referente à um item na navigation bar
-    TelaEscolherQuadraOuSala(),
+    choose_room_or_court(),
     Text("Goodbye"),
     Text("Fare well"),
     Text("So long"),
