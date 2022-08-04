@@ -14,7 +14,7 @@ class TelaEscolherQuadraOuSala extends StatelessWidget {
             height: 200,
           ),
           Text("O que você gostaria de reservar?",
-              style: GoogleFonts.abel(
+              style: TextStyle(
                   fontSize: 30, color: Color.fromARGB(255, 12, 74, 126))),
           SizedBox(height: 40),
           BotaoGrandeComIcone("Salas", () {
@@ -55,7 +55,7 @@ class TelaEscolherQuadraOuSala extends StatelessWidget {
           ),
           Text(
             label,
-            style: GoogleFonts.abel(
+            style: TextStyle(
                 fontSize: 50, color: Color.fromARGB(255, 12, 74, 126)),
           )
         ],
