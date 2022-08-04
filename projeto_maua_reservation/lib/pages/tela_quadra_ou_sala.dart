@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TelaEscolherQuadraOuSala extends StatelessWidget {
   TelaEscolherQuadraOuSala({Key? key}) : super(key: key);
@@ -13,10 +14,8 @@ class TelaEscolherQuadraOuSala extends StatelessWidget {
             height: 200,
           ),
           Text("O que você gostaria de reservar?",
-              style: const TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 12, 74, 126),
-                  fontFamily: "abel")),
+              style: GoogleFonts.abel(
+                  fontSize: 30, color: Color.fromARGB(255, 12, 74, 126))),
           SizedBox(height: 40),
           BotaoGrandeComIcone("Salas", () {
             print("Indo para a página de salas");
@@ -56,7 +55,7 @@ class TelaEscolherQuadraOuSala extends StatelessWidget {
           ),
           Text(
             label,
-            style: const TextStyle(
+            style: GoogleFonts.abel(
                 fontSize: 50, color: Color.fromARGB(255, 12, 74, 126)),
           )
         ],
