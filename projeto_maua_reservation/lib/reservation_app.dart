@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_maua_reservation/tela_mae.dart';
+import 'package:projeto_maua_reservation/pages/tela_mae.dart';
 
-import 'login_page.dart';
 
 class ReservationApp extends StatelessWidget {
   const ReservationApp({Key? key}) : super(key: key);

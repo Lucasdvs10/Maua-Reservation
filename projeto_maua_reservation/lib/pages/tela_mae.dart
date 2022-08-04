@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_maua_reservation/tela_quadra_ou_sala.dart';
+import 'package:projeto_maua_reservation/pages/tela_quadra_ou_sala.dart';
+
+
 
 class TelaMae extends StatefulWidget {
   const TelaMae({Key? key}) : super(key: key);
