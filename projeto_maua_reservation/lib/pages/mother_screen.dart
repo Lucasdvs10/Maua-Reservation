@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
-import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
+import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/pages/tela_quadra_ou_sala.dart';
 
-class MotherScreen extends StatefulWidget {
-  const MotherScreen({Key? key}) : super(key: key);
+
+
+class TelaMae extends StatefulWidget {
+  const TelaMae({Key? key}) : super(key: key);
 
   @override
-  State<MotherScreen> createState() => _MotherScreenState();
+  State<TelaMae> createState() => _TelaMaeState();
 }
 
-class _MotherScreenState extends State<MotherScreen> {
+class _TelaMaeState extends State<TelaMae> {
   int currentPageIndex = 0;
 
   final screensList = [
     //aqui a gente coloca cada página referente à um item na navigation bar
-    // ChooseRoomOrCourt(),
-    BackgroundCardRoomChoose(),
-    ChooseRoomOrCourt(),
+    TelaEscolherQuadraOuSala(),
+    Text("Goodbye"),
     Text("Fare well"),
     Text("So long"),
   ];
