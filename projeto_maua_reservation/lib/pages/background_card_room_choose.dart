@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/widgets/calendar.dart';
 
+import '../Utils.dart';
+
 class BackgroundCardRoomChoose extends StatelessWidget {
   const BackgroundCardRoomChoose({Key? key}) : super(key: key);
 
@@ -36,7 +38,7 @@ class BackgroundCardRoomChoose extends StatelessWidget {
                   width: 200,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 12, 74, 126)),
+                      color: Utils.AzulDaDev),
                   child: const Text(
                     "Salas",
                     style: TextStyle(

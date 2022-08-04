@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/Utils.dart';
 
 class GenericButton extends StatefulWidget {
   late State<GenericButton> _state;
@@ -9,7 +10,7 @@ class GenericButton extends StatefulWidget {
   final double height, width;
   final TextStyle enabledTextStyle;
   final TextStyle disabledTextStyle;
-  bool enabled = true;
+  late bool enabled;
   void Function() callBackFunction;
 
   GenericButton(
@@ -21,7 +22,7 @@ class GenericButton extends StatefulWidget {
       required this.width,
       required this.enabledTextStyle,
       required this.disabledTextStyle,
-      required this.callBackFunction})
+      required this.callBackFunction, required this.enabled})
       : super(key: key) {
     _state = _GenericButtonState();
   }
@@ -41,13 +42,14 @@ class GenericButton extends StatefulWidget {
   @override
   State<GenericButton> createState() => _state;
 
-  factory GenericButton.Proximo() {
+  factory GenericButton.Proximo(bool activated) {
     return GenericButton(
+      enabled: activated,
       buttonText: 'Proximo',
       disabledButtonStyle: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.grey)),
       enabledButtonStyle: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.blue)),
+          backgroundColor: MaterialStateProperty.all<Color>(Utils.AzulDaDev)),
       disabledTextStyle: const TextStyle(color: Colors.white),
       enabledTextStyle: const TextStyle(color: Colors.white),
       height: 50,
@@ -57,15 +59,15 @@ class GenericButton extends StatefulWidget {
       },
     );
   }
-  
 
-  factory GenericButton.Voltar() {
+  factory GenericButton.Voltar(bool activated) {
     return GenericButton(
+      enabled: activated,
       buttonText: 'Voltar',
       disabledButtonStyle: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.grey)),
       enabledButtonStyle: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.blue)),
+          backgroundColor: MaterialStateProperty.all<Color>(Utils.AzulDaDev)),
       disabledTextStyle: const TextStyle(color: Colors.white),
       enabledTextStyle: const TextStyle(color: Colors.white),
       height: 50,
