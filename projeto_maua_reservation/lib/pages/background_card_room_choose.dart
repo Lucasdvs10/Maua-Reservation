@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/widgets/calendar.dart';
 
 class BackgroundCardRoomChoose extends StatelessWidget {
   const BackgroundCardRoomChoose({Key? key}) : super(key: key);
@@ -24,8 +25,7 @@ class BackgroundCardRoomChoose extends StatelessWidget {
                 padding: const EdgeInsets.all(40),
                 height: 600,
                 width: 400,
-                child:
-                    const Text("Os cards de calendário, blocos e etc vão aqui"),
+                child: const CalendarCard(),
               ),
             ),
             Positioned(
