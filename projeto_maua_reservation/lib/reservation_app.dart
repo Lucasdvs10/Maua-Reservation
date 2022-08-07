@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/pages/tela-info.dart';
 import 'package:projeto_maua_reservation/pages/tela_mae.dart';
 
 
@@ -17,7 +18,7 @@ class ReservationApp extends StatelessWidget {
         fontFamily: GoogleFonts.abel().fontFamily
         
       ),
-      home: const LoginPage(),
+      home: const TelaMae(),
     );
   }
 }

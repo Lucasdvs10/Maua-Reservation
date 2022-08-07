@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/pages/tela-info.dart';
 import 'package:projeto_maua_reservation/pages/tela_quadra_ou_sala.dart';
 
 
@@ -19,7 +20,7 @@ class _TelaMaeState extends State<TelaMae> {
     TelaEscolherQuadraOuSala(),
     Text("Goodbye"),
     Text("Fare well"),
-    Text("So long"),
+    InfoPage(),
   ];
 
   @override
