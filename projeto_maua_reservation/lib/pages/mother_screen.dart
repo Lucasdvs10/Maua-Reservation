@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/pages/tela-info.dart';
 
 class TelaMae extends StatefulWidget {
   const TelaMae({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _TelaMaeState extends State<TelaMae> {
     ChooseRoomOrCourt(),
     Text("Goodbye"),
     Text("Fare well"),
-    Text("So long"),
+    InfoPage()
   ];
 
   @override
