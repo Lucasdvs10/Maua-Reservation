@@ -22,7 +22,7 @@ class ChooseRoomOrCourt extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const BackgroundCardRoomChoose()),
+                  builder: (context) => BackgroundCardRoomChoose()),
             );
             print("Indo para a página de salas");
           }, 'assets/images/Circulos.png'),

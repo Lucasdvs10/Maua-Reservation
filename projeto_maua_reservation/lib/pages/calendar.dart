@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/pages/select_block_screen.dart';
 import 'package:projeto_maua_reservation/widgets/generic_button.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 import '../Utils.dart';
+import 'background_card_room_choose.dart';
 
 class CalendarCard extends StatefulWidget {
   const CalendarCard({Key? key}) : super(key: key);
@@ -14,7 +16,9 @@ class CalendarCard extends StatefulWidget {
 class _CalendarCardState extends State<CalendarCard> {
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
-  GenericButton proximoButton = GenericButton.Proximo(false, null);
+  GenericButton proximoButton = GenericButton.Proximo(false, () {
+    BackgroundCardRoomChoose.state.SetChildWidget(SelectBlockPage());
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +29,8 @@ class _CalendarCardState extends State<CalendarCard> {
             focusedDay: focusedDay,
             firstDay: DateTime(2002, 6, 28),
             lastDay: DateTime(2027, 1, 10),
-            headerStyle:
-                const HeaderStyle(formatButtonVisible: false, titleCentered: true),
+            headerStyle: const HeaderStyle(
+                formatButtonVisible: false, titleCentered: true),
             calendarStyle: CalendarStyle(
                 selectedDecoration: BoxDecoration(
                     color: Utils.AzulDaDev, shape: BoxShape.circle)),

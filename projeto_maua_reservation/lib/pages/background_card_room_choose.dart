@@ -7,8 +7,26 @@ import 'package:projeto_maua_reservation/pages/select_room_page.dart';
 import '../Utils.dart';
 import '../widgets/select_option_buttons_list.dart';
 
-class BackgroundCardRoomChoose extends StatelessWidget {
-  const BackgroundCardRoomChoose({Key? key}) : super(key: key);
+class BackgroundCardRoomChoose extends StatefulWidget {
+  static _BackgroundCardRoomChooseState state =
+      _BackgroundCardRoomChooseState();
+
+  BackgroundCardRoomChoose({Key? key}) : super(key: key) {}
+
+  static void SetChildWidget(Widget widget) => state.childWidget = widget;
+
+  @override
+  State<BackgroundCardRoomChoose> createState() => state;
+}
+
+class _BackgroundCardRoomChooseState extends State<BackgroundCardRoomChoose> {
+  Widget childWidget = CalendarCard();
+
+  void SetChildWidget(Widget widget) {
+    setState(() {
+      childWidget = widget;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +49,7 @@ class BackgroundCardRoomChoose extends StatelessWidget {
                 padding: const EdgeInsets.all(40),
                 height: 600,
                 width: 400,
-                child: SelectRoomPage(
-                    Block.BlocoH()), //Aqui a gente fica alterando os cards
+                child: childWidget, //Aqui a gente fica alterando os cards
               ),
             ),
             Positioned(
