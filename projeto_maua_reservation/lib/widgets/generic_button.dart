@@ -65,7 +65,7 @@ class GenericButton extends StatefulWidget {
     );
   }
 
-  factory GenericButton.Voltar(bool activated) {
+  factory GenericButton.Voltar(bool activated, void Function()? func) {
     return GenericButton(
       enabled: activated,
       buttonText: 'Voltar',
@@ -79,6 +79,9 @@ class GenericButton extends StatefulWidget {
       width: 100,
       callBackFunction: () {
         print("Indo pra proxima pagina");
+        if (func != null) {
+          func();
+        }
       },
     );
   }

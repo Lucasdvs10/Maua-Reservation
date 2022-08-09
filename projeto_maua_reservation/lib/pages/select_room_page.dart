@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
+import 'package:projeto_maua_reservation/pages/select_block_screen.dart';
 import 'package:projeto_maua_reservation/widgets/generic_button.dart';
 import 'package:projeto_maua_reservation/widgets/select_option_buttons_list.dart';
 
@@ -10,6 +12,9 @@ class SelectRoomPage extends StatefulWidget {
   SelectRoomPage(Block block, {Key? key}) : super(key: key) {
     state = _SelectRoomPageState();
     state._block = block;
+    state.proximoButton = GenericButton.Proximo(true, () {
+      print(state._list.GetCurrentStringOption());
+    });
 
     state._list = SelectRoomButtonsList(List.generate(
         state._block.GetRoomsList().length,
@@ -23,6 +28,7 @@ class SelectRoomPage extends StatefulWidget {
 class _SelectRoomPageState extends State<SelectRoomPage> {
   late Block _block;
   late SelectRoomButtonsList _list;
+  late GenericButton proximoButton;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +42,13 @@ class _SelectRoomPageState extends State<SelectRoomPage> {
         Positioned(
           bottom: 5,
           right: 10,
-          child: GenericButton.Proximo(true, () {
-            print(_list.GetCurrentStringOption());
+          child: proximoButton,
+        ),
+        Positioned(
+          bottom: 5,
+          left: 10,
+          child: GenericButton.Voltar(true, () {
+            BackgroundCardRoomChoose.state.SetChildWidget(SelectBlockPage());
           }),
         )
       ]),
