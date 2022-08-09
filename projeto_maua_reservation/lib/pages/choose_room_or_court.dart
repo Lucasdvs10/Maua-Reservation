@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
-import 'package:projeto_maua_reservation/widgets/calendar.dart';
+import 'package:projeto_maua_reservation/pages/calendar.dart';
 
 class ChooseRoomOrCourt extends StatelessWidget {
   ChooseRoomOrCourt({Key? key}) : super(key: key);

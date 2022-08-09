@@ -22,7 +22,8 @@ class GenericButton extends StatefulWidget {
       required this.width,
       required this.enabledTextStyle,
       required this.disabledTextStyle,
-      required this.callBackFunction, required this.enabled})
+      required this.callBackFunction,
+      required this.enabled})
       : super(key: key) {
     _state = _GenericButtonState();
   }
@@ -42,7 +43,7 @@ class GenericButton extends StatefulWidget {
   @override
   State<GenericButton> createState() => _state;
 
-  factory GenericButton.Proximo(bool activated) {
+  factory GenericButton.Proximo(bool activated, void Function()? func) {
     return GenericButton(
       enabled: activated,
       buttonText: 'Proximo',
@@ -56,6 +57,10 @@ class GenericButton extends StatefulWidget {
       width: 100,
       callBackFunction: () {
         print("Indo pra proxima pagina");
+
+        if (func != null) {
+          func();
+        }
       },
     );
   }

@@ -14,7 +14,7 @@ class CalendarCard extends StatefulWidget {
 class _CalendarCardState extends State<CalendarCard> {
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
-  GenericButton proximoButton = GenericButton.Proximo(false);
+  GenericButton proximoButton = GenericButton.Proximo(false, null);
 
   @override
   Widget build(BuildContext context) {

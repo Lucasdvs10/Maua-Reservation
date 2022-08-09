@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_maua_reservation/widgets/calendar.dart';
+import 'package:projeto_maua_reservation/Entities/block.dart';
+import 'package:projeto_maua_reservation/pages/calendar.dart';
+import 'package:projeto_maua_reservation/pages/select_block_screen.dart';
+import 'package:projeto_maua_reservation/pages/select_room_page.dart';
 
 import '../Utils.dart';
+import '../widgets/select_option_buttons_list.dart';
 
 class BackgroundCardRoomChoose extends StatelessWidget {
   const BackgroundCardRoomChoose({Key? key}) : super(key: key);
@@ -27,7 +31,8 @@ class BackgroundCardRoomChoose extends StatelessWidget {
                 padding: const EdgeInsets.all(40),
                 height: 600,
                 width: 400,
-                child: const CalendarCard(),
+                child: SelectRoomPage(
+                    Block.BlocoH()), //Aqui a gente fica alterando os cards
               ),
             ),
             Positioned(
