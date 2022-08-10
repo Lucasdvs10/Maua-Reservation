@@ -16,7 +16,7 @@ class EntrarButton extends StatelessWidget {
         elevation: MaterialStateProperty.all(0),
       ),
       onPressed: () {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => TelaMae()),
         );

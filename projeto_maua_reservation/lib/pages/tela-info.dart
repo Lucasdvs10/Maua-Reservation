@@ -15,6 +15,9 @@ class InfoPage extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).padding.top,
               ),
+              const Padding(
+            padding: EdgeInsets.only(top: 60)
+              ),
               Container(
                 height: 60,
                 width: 160,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
+import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/pages/mother_screen.dart';
 
 import 'pages/select_block_screen.dart';
 
@@ -16,7 +18,7 @@ class ReservationApp extends StatelessWidget {
       theme: ThemeData(
           appBarTheme: const AppBarTheme(color: Colors.white),
           fontFamily: GoogleFonts.abel().fontFamily),
-      home: LoginPage(),
+      home: TelaMae(),
     );
   }
 }

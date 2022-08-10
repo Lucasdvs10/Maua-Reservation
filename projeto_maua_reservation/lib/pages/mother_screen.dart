@@ -48,6 +48,7 @@ class _TelaMaeState extends State<TelaMae> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Row(mainAxisAlignment: MainAxisAlignment.start ,children: [Image.asset("assets/images/Logo Mauá.png", fit: BoxFit.contain, height: 55,)],) ,elevation: 0,),
       body: bodyWidget,
       bottomNavigationBar: BarraInferior(),
     );
