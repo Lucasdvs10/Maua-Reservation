@@ -16,7 +16,8 @@ class BackgroundCardRoomChoose extends StatefulWidget {
   static void SetChildWidget(Widget widget) => state.childWidget = widget;
 
   @override
-  State<BackgroundCardRoomChoose> createState() => state;
+  State<BackgroundCardRoomChoose> createState() =>
+      state = _BackgroundCardRoomChooseState();
 }
 
 class _BackgroundCardRoomChooseState extends State<BackgroundCardRoomChoose> {

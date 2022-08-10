@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
 import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
 import 'package:projeto_maua_reservation/pages/tela-info.dart';
 
 class TelaMae extends StatefulWidget {
-  const TelaMae({Key? key}) : super(key: key);
+  TelaMae({Key? key}) : super(key: key) {
+    state = _TelaMaeState(ChooseRoomOrCourt());
+  }
+  static _TelaMaeState state = _TelaMaeState(ChooseRoomOrCourt());
+
+  static Widget? bodyWidget = ChooseRoomOrCourt();
+
+  static void SetMotherScreenBody(Widget? wiget) {
+    bodyWidget = wiget;
+
+    state.SetMotherScreenBody(bodyWidget);
+  }
 
   @override
-  State<TelaMae> createState() => _TelaMaeState();
+  State<TelaMae> createState() => state;
 }
 
 class _TelaMaeState extends State<TelaMae> {
   int currentPageIndex = 0;
+  Widget? bodyWidget;
 
   final screensList = [
     //aqui a gente coloca cada página referente à um item na navigation bar
@@ -21,19 +34,29 @@ class _TelaMaeState extends State<TelaMae> {
     InfoPage()
   ];
 
+  void SetMotherScreenBody(Widget? wiget) {
+    setState(() {
+      bodyWidget = wiget;
+      print(bodyWidget);
+    });
+  }
+
+  _TelaMaeState(Widget? bodyWidget) {
+    this.bodyWidget = bodyWidget;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screensList[currentPageIndex],
+      body: bodyWidget,
       bottomNavigationBar: BarraInferior(),
     );
   }
 
   BottomNavigationBar BarraInferior() => BottomNavigationBar(
         onTap: (value) {
-          setState(() {
-            currentPageIndex = value;
-          });
+          currentPageIndex = value;
+          SetMotherScreenBody(screensList[currentPageIndex]);
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -18,7 +18,7 @@ class EntrarButton extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const TelaMae()),
+          MaterialPageRoute(builder: (context) => TelaMae()),
         );
       },
       child: Container(

@@ -16,7 +16,7 @@ class ReservationApp extends StatelessWidget {
       theme: ThemeData(
           appBarTheme: const AppBarTheme(color: Colors.white),
           fontFamily: GoogleFonts.abel().fontFamily),
-      home: BackgroundCardRoomChoose(),
+      home: LoginPage(),
     );
   }
 }
