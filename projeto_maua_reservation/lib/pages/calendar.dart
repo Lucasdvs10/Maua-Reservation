@@ -31,7 +31,7 @@ class _CalendarCardState extends State<CalendarCard> {
             lastDay: DateTime(2027, 1, 10),
             headerStyle: const HeaderStyle(
                 formatButtonVisible: false, titleCentered: true),
-            calendarStyle: CalendarStyle(
+            calendarStyle: const CalendarStyle(
                 selectedDecoration: BoxDecoration(
                     color: Utils.AzulDaDev, shape: BoxShape.circle)),
             currentDay: focusedDay,
