@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/Entities/block.dart';
 import 'package:projeto_maua_reservation/pages/calendar.dart';
+import 'package:projeto_maua_reservation/pages/formulario_page.dart';
 import 'package:projeto_maua_reservation/pages/select_block_screen.dart';
 import 'package:projeto_maua_reservation/pages/select_room_page.dart';
 
@@ -50,7 +51,7 @@ class _BackgroundCardRoomChooseState extends State<BackgroundCardRoomChoose> {
                 padding: const EdgeInsets.all(40),
                 height: 600,
                 width: 400,
-                child: childWidget, //Aqui a gente fica alterando os cards
+                child: FormularioPage(), //Aqui a gente fica alterando os cards
               ),
             ),
             Positioned(
