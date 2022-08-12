@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/widgets/status_solicitation_card.dart';
 
 class SolicitationCard extends StatelessWidget {
   final String data;
@@ -6,7 +7,13 @@ class SolicitationCard extends StatelessWidget {
   final String sala;
   final String motivo;
 
-  const SolicitationCard({Key? key, required this.data, required this.hora, required this.sala, required this.motivo}) : super(key: key);
+  const SolicitationCard(
+      {Key? key,
+      required this.data,
+      required this.hora,
+      required this.sala,
+      required this.motivo})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +40,9 @@ class SolicitationCard extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Text("Status: Aprovado")
+                Row(
+                  children: [Text("Status:"), StatusWidget.Pendente()],
+                )
               ],
             ),
           )

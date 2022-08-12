@@ -9,7 +9,7 @@ class TelaMae extends StatefulWidget {
   TelaMae({Key? key}) : super(key: key) {
     state = _TelaMaeState(SolicitationCard(
       data: "10/02",
-      hora: "10:25",
+      hora: "10:25 até 13:00",
       sala: "H 207",
       motivo: "Jogar lol drogado",
     )); //Mudar aqui quando terminar!!!!
