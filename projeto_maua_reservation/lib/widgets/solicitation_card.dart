@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_maua_reservation/Utils.dart';
 import 'package:projeto_maua_reservation/widgets/status_solicitation_card.dart';
 
 class SolicitationCard extends StatelessWidget {
@@ -17,7 +18,10 @@ class SolicitationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textStyle = TextStyle(color: Utils.AzulDaDev, fontSize: 16);
+
     return Card(
+      elevation: 5,
       child: SizedBox(
         height: 200,
         width: 300,
@@ -25,7 +29,10 @@ class SolicitationCard extends StatelessWidget {
           const Positioned(
             left: 140,
             top: 10,
-            child: Text("Sala"),
+            child: Text(
+              "Sala",
+              style: TextStyle(color: Utils.AzulDaDev, fontSize: 20),
+            ),
           ),
           Positioned(
             top: 50,
@@ -33,15 +40,33 @@ class SolicitationCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Data: $data"),
-                Text("Hora: $hora"),
-                Text("Sala: $sala"),
-                Text("Motivo: $motivo"),
-                SizedBox(
-                  height: 40,
+                Text(
+                  "Data: $data",
+                  style: textStyle,
+                ),
+                Text(
+                  "Hora: $hora",
+                  style: textStyle,
+                ),
+                Text(
+                  "Sala: $sala",
+                  style: textStyle,
+                ),
+                Text(
+                  "Motivo: $motivo",
+                  style: textStyle,
+                ),
+                const SizedBox(
+                  height: 30,
                 ),
                 Row(
-                  children: [Text("Status:"), StatusWidget.Pendente()],
+                  children: [
+                    Text(
+                      "Status:",
+                      style: textStyle,
+                    ),
+                    StatusWidget.Pendente()
+                  ],
                 )
               ],
             ),

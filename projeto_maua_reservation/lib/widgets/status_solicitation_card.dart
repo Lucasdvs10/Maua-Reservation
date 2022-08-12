@@ -19,7 +19,7 @@ class StatusWidget extends StatelessWidget {
         child: Center(
           child: Text(
             cardText,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 15),
           ),
         ),
       ),
