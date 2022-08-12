@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:projeto_maua_reservation/pages/background_card_room_choose.dart';
 import 'package:projeto_maua_reservation/pages/choose_room_or_court.dart';
 import 'package:projeto_maua_reservation/pages/login_page.dart';
+import 'package:projeto_maua_reservation/widgets/solicitation_card.dart';
 import 'package:projeto_maua_reservation/pages/tela-info.dart';
 
 class TelaMae extends StatefulWidget {
   TelaMae({Key? key}) : super(key: key) {
-    state = _TelaMaeState(ChooseRoomOrCourt());
+    state = _TelaMaeState(SolicitationCard(
+      data: "10/02",
+      hora: "10:25",
+      sala: "H 207",
+      motivo: "Jogar lol drogado",
+    )); //Mudar aqui quando terminar!!!!
   }
   static _TelaMaeState state = _TelaMaeState(ChooseRoomOrCourt());
 
