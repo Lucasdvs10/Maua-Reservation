@@ -7,13 +7,14 @@ class SolicitationCard extends StatelessWidget {
   final String hora;
   final String sala;
   final String motivo;
+  final StatusWidget status;
 
   const SolicitationCard(
       {Key? key,
       required this.data,
       required this.hora,
       required this.sala,
-      required this.motivo})
+      required this.motivo, required this.status})
       : super(key: key);
 
   @override
@@ -65,7 +66,7 @@ class SolicitationCard extends StatelessWidget {
                       "Status:",
                       style: textStyle,
                     ),
-                    StatusWidget.Pendente()
+                    status
                   ],
                 )
               ],
