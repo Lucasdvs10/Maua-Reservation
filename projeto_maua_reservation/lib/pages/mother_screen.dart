@@ -5,7 +5,7 @@ import 'package:projeto_maua_reservation/pages/tela-info.dart';
 
 class TelaMae extends StatefulWidget {
   TelaMae({Key? key}) : super(key: key) {
-    state = _TelaMaeState(SolicitationPage()); //Mudar aqui quando terminar!!!!
+    state = _TelaMaeState(ChooseRoomOrCourt());
   }
   static _TelaMaeState state = _TelaMaeState(ChooseRoomOrCourt());
 
@@ -28,8 +28,8 @@ class _TelaMaeState extends State<TelaMae> {
   final screensList = [
     //aqui a gente coloca cada página referente à um item na navigation bar
     ChooseRoomOrCourt(),
-    Text("Goodbye"),
     Text("Fare well"),
+    SolicitationPage(),
     InfoPage()
   ];
 
@@ -47,7 +47,19 @@ class _TelaMaeState extends State<TelaMae> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Row(mainAxisAlignment: MainAxisAlignment.start ,children: [Image.asset("assets/images/Logo Mauá.png", fit: BoxFit.contain, height: 55,)],) ,elevation: 0,),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              "assets/images/Logo Mauá.png",
+              fit: BoxFit.contain,
+              height: 55,
+            )
+          ],
+        ),
+        elevation: 0,
+      ),
       body: bodyWidget,
       bottomNavigationBar: BarraInferior(),
     );
